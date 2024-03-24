@@ -3,10 +3,11 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>LetsencryptCert</ToolCommandName>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <Version>3.0.0</Version>
-    <FileVersion>3.0.0.0</FileVersion>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Version>4.0.3</Version>
+    <FileVersion>4.0.3.0</FileVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
     <Authors>Uwe Riegel</Authors>
     <Company>Uwe Riegel</Company>
     <Description>Lets Encrypt Certificate creator and updater</Description>
@@ -15,22 +16,13 @@
     <PackageProjectUrl>https://github.com/uriegel/letsencrypt-cert</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageTags>F#;FSharp;dotnet;tool;tls;certificate</PackageTags>
+    <PackageTags>C#;CSharp;dotnet;tool;tls;certificate</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>
-Converted to F#    
-    </PackageReleaseNotes>
+    <PackageReleaseNotes>Converted to C#</PackageReleaseNotes>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="CertRequest.fs" />
-    <Compile Include="Parameters.fs" />
-    <Compile Include="Account.fs" />
-    <Compile Include="Authorization.fs" />
-    <Compile Include="Certificate.fs" />
-    <Compile Include="Program.fs" />
-  </ItemGroup>
-
+  
   <PropertyGroup>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
@@ -42,8 +34,7 @@ Converted to F#
 
 
   <ItemGroup>
-    <PackageReference Include="FSharp.Control.AsyncSeq" Version="3.2.1" />
-    <PackageReference Include="FSharpTools" Version="9.4.1" />
+    <PackageReference Include="AspNetExtensions" Version="7.1.3" />
     <PackageReference Include="Webprofusion.Certes" Version="2.4.1" />
   </ItemGroup>
 </Project>

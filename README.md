@@ -33,7 +33,7 @@ LetsencryptCert -create
 ``` 
 This lets LetsencryptCert create an account.
 
-Create a file ```letsencrypt-uweb``` in ```/etc``` (Linux) or ```c:\program data\LetsencryptUweb``` (Windows). This text file should contain a password for the to be created pfx certificate.
+Create a file ```letsencrypt-uweb``` in ```/etc``` (Linux) or ```c:\program data\letsencrypt-uweb``` (Windows). This text file should contain a password for the to be created pfx certificate.
 
 ## Obtaining certificate (test mode)
 After executing the tool for the first time and having created an account, you can obtain a certificate from LetsEncrypt by running the tool:

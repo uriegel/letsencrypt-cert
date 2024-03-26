@@ -11,7 +11,7 @@ if (string.IsNullOrEmpty(GetPfxPassword()))
 
 await (Parameters.Get() switch
 {
-    { Staging: true, Mode: OperationMode.Create } => 1.ToAsync().SideEffectAwait(_ => Account.Create()),
+    { Mode: OperationMode.Create } => 1.ToAsync().SideEffectAwait(_ => Account.Create()),
     _ when !Certificate.CheckValidationTime() => 2.ToAsync().SideEffectAwait( _ => Perform()),
     _ => 3.ToAsync().SideEffectAsync(_ => WriteLine("No further action needed"))
 })

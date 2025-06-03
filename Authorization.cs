@@ -48,7 +48,7 @@ static class Authorizations
                 .ToAsyncResult()
                 .SideEffectWhenOk(WriteKeyTokenFile)
                 .BindAwait(ValidateChallenge);
-        return AsyncResultExtensions.RepeatOnError(Validate, 7, TimeSpan.FromSeconds(3));
+        return RepeatOnError(Validate, 7, TimeSpan.FromSeconds(3));
     }
     
     static AsyncResult<Unit, string> ValidateChallenge(IChallengeContext challenge)

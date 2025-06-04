@@ -1,14 +1,12 @@
-record CertificateData(
-    string CountryName,
-    string State,
-    string Locality,
-    string Organization,
-    string OrganizationUnit,
-    string CommonName
-);
-
-record CertRequest(
-    string Account,
-    string[] Domains,
-    CertificateData Data
-);
+class CertRequest
+{
+    public CertRequest(string account, string[] domains, CertificateData data)
+    {
+        Account = account;
+        Domains = domains;
+        Data = data;
+    }
+    public string Account { get; }
+    public string[] Domains { get; }
+    public CertificateData Data { get;}
+}

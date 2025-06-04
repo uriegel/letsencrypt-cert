@@ -5,9 +5,9 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>4.0.4</Version>
-    <FileVersion>4.0.4.0</FileVersion>
-    <AssemblyVersion>4.0.4.0</AssemblyVersion>
+    <Version>5.0.0</Version>
+    <FileVersion>5.0.0.0</FileVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
     <Authors>Uwe Riegel</Authors>
     <Company>Uwe Riegel</Company>
     <Description>Lets Encrypt Certificate creator and updater</Description>
@@ -34,7 +34,8 @@
 
 
   <ItemGroup>
-    <PackageReference Include="AspNetExtensions" Version="7.3.1" />
-    <PackageReference Include="Webprofusion.Certes" Version="2.4.1" />
+    <PackageReference Include="NewtonSoft.Json" Version="13.0.1" />
+    <PackageReference Include="Certes" Version="3.0.0" />
+    <PackageReference Include="CsTools" Version="7.25.8" />
   </ItemGroup>
 </Project>

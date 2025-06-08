@@ -5,9 +5,9 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>5.0.0</Version>
-    <FileVersion>5.0.0.0</FileVersion>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <Version>5.0.1</Version>
+    <FileVersion>5.0.1.0</FileVersion>
+    <AssemblyVersion>5.0.1.0</AssemblyVersion>
     <Authors>Uwe Riegel</Authors>
     <Company>Uwe Riegel</Company>
     <Description>Lets Encrypt Certificate creator and updater</Description>
@@ -34,8 +34,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="NewtonSoft.Json" Version="13.0.1" />
-    <PackageReference Include="Certes" Version="3.0.0" />
+    <PackageReference Include="Certes" Version="3.0.4" />
     <PackageReference Include="CsTools" Version="7.25.8" />
   </ItemGroup>
 </Project>

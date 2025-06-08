@@ -63,7 +63,7 @@ Append
 
 ```
 PATH=$PATH:/home/pi/.dotnet/tools
-0 4 * * * LetsencryptCert > /home/pi/logs/LetsencryptCert.log 2>&1
+0 4 * * * LetsencryptCert > /home/pi/logs/letsencrypt.log 2>&1
 ```
 
 This executes dns update every day at 4 AM (universal time). Last log is saved in ```/home/pi/logs/LetsencryptCert.log```

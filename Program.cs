@@ -68,7 +68,7 @@ try
         {
             if (!await CheckServer.Check(dom))
             {
-                Error.WriteLine("Domain {dom} not prepared for Let's Encrypt");
+                Error.WriteLine($"Domain {dom} not prepared for Let's Encrypt");
                 return;
             }
         }

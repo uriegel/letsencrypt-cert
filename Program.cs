@@ -29,7 +29,7 @@ try
     WriteLine(staging ? "Staging" : "!!! P R O D U C T I V E !!!");
 
     var certificateFile = Path.Combine(encryptDirectory, $"certificate{(staging ? "-staging" : "")}.pfx");
-    accountFile = Path.Combine(encryptDirectory, "access.pem");
+    accountFile = Path.Combine(encryptDirectory, $"access{(staging ? "-staging" : "")}.pem");
     certRequestFile = Path.Combine(encryptDirectory, "cert.json");
 
     if (deleteAccount)
@@ -39,7 +39,7 @@ try
     }
     else if (createAccount)
     {
-        await CreateAccountAsync();
+        await CreateAccountAsync(staging);
         return;
     }
     else
@@ -110,7 +110,7 @@ finally
 }
 
 
-async Task CreateAccountAsync()
+async Task CreateAccountAsync(bool staging)
 {
     WriteLine("Creating letsencrypt account");
 
@@ -126,7 +126,7 @@ async Task CreateAccountAsync()
         Directory.CreateDirectory(fileInfo.DirectoryName ?? "");
 
     File.Copy("cert.json", certRequestFile, true);
-    var acmeContext = new AcmeContext(WellKnownServers.LetsEncryptV2);
+    var acmeContext = new AcmeContext(staging ? WellKnownServers.LetsEncryptStagingV2 : WellKnownServers.LetsEncryptV2);
     account = await acmeContext.NewAccount(certRequest.Account, true);
     var pemKey = acmeContext.AccountKey.ToPem();
     var fi = new FileInfo(accountFile);

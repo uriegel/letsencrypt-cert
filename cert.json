@@ -4,11 +4,11 @@
         "uriegel.de", "fritz.uriegel.de", "familie.uriegel.de"
     ],
     "data": {
-        "CountryName": "DE",
-        "State": "NRW",
-        "Locality": "Cologne",
-        "Organization": "URiegel",
-        "OrganizationUnit": "Dev",
-        "CommonName": "uriegel.de"
+        "countryName": "DE",
+        "state": "NRW",
+        "locality": "Cologne",
+        "organization": "URiegel",
+        "organizationUnit": "Dev",
+        "commonName": "uriegel.de"
     }
 }

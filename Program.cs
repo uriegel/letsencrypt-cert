@@ -165,7 +165,7 @@ void DeleteAccount()
 CertRequest? ReadRequest(string requestFile)
 {
     using var file = File.OpenRead(requestFile);
-    return JsonSerializer.Deserialize<CertRequest>(file);
+    return JsonSerializer.Deserialize<CertRequest>(file, Json.Defaults);
 }
 
 async Task ValidateAsync(IAuthorizationContext authorization)

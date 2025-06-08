@@ -17,12 +17,12 @@ Copy ```cert.json``` to current directory with following content:
         "<domain 1>", "<domain 2>", "<domain 3>"
     ],
     "data": {
-        "CountryName": "<my country>",
-        "State": "<my state",
-        "Locality": "<my locality>",
-        "Organization": "<my organization>",
-        "OrganizationUnit": "<my organization unit>",
-        "CommonName": "<my common name, main domain>"
+        "countryName": "<my country>",
+        "state": "<my state",
+        "locality": "<my locality>",
+        "organization": "<my organization>",
+        "organizationUnit": "<my organization unit>",
+        "commonName": "<my common name, main domain>"
     }
 }
 

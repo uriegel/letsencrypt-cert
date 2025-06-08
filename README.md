@@ -63,7 +63,6 @@ Append
 
 ```
 PATH=$PATH:/home/pi/.dotnet/tools
-DOTNET_ROOT=/home/pi/.dotnet
 0 4 * * * LetsencryptCert > /home/pi/logs/LetsencryptCert.log 2>&1
 ```
 

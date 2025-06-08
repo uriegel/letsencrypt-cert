@@ -3,11 +3,11 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>LetsencryptCert</ToolCommandName>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>5.0.1</Version>
-    <FileVersion>5.0.1.0</FileVersion>
-    <AssemblyVersion>5.0.1.0</AssemblyVersion>
+    <Version>6.0.0</Version>
+    <FileVersion>6.0.0.0</FileVersion>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
     <Authors>Uwe Riegel</Authors>
     <Company>Uwe Riegel</Company>
     <Description>Lets Encrypt Certificate creator and updater</Description>
@@ -31,7 +31,6 @@
     <None Include="LICENSE" pack="true" PackagePath="." />
     <None Include="README.md" pack="true" PackagePath="." />
   </ItemGroup>
-
 
   <ItemGroup>
     <PackageReference Include="Certes" Version="3.0.4" />

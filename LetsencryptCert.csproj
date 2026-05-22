@@ -3,11 +3,9 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>LetsencryptCert</ToolCommandName>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>6.0.2</Version>
-    <FileVersion>6.0.2.0</FileVersion>
-    <AssemblyVersion>6.0.2.0</AssemblyVersion>
+    <Version>10.0.0</Version>
     <Authors>Uwe Riegel</Authors>
     <Company>Uwe Riegel</Company>
     <Description>Lets Encrypt Certificate creator and updater</Description>
@@ -19,7 +17,7 @@
     <PackageTags>C#;CSharp;dotnet;tool;tls;certificate</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>Converted to C#</PackageReleaseNotes>
+    <PackageReleaseNotes>.NET 10</PackageReleaseNotes>
     <Nullable>enable</Nullable>
   </PropertyGroup>
   

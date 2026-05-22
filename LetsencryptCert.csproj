@@ -32,6 +32,6 @@
 
   <ItemGroup>
     <PackageReference Include="Certes" Version="3.0.4" />
-    <PackageReference Include="CsTools" Version="7.25.8" />
+    <PackageReference Include="CsTools" Version="9.0.3" />
   </ItemGroup>
 </Project>

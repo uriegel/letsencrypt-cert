@@ -11,7 +11,7 @@ using static CsTools.Functional.Memoization;
 // Parameter: -del: delete account
 // Parameter: -create: read file cert.json
 
-string encryptDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "letsencrypt-uweb");
+string encryptDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "letsencrypt-cert");
 
 string certRequestFile;
 IAccountContext account;
@@ -207,7 +207,7 @@ string InitGetPfxPassword()
     => (OperatingSystem.IsLinux()
         ? "/etc"
         : Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData))
-        ?.AppendPath("letsencrypt-uweb")
+        ?.AppendPath("letsencrypt-cert")
         ?.ReadAllTextFromFilePath()
         ?.Trim() 
         ?? "".SideEffect(_ => WriteLine("!!!NO PASSWORD!!"));

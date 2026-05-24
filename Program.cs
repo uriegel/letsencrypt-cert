@@ -46,8 +46,8 @@ try
     {
         if (File.Exists(certificateFile))
         {
-            var certificate = new X509Certificate2(certificateFile, GetPfxPassword());
-
+            var certificate = X509CertificateLoader.LoadPkcs12FromFile(certificateFile, GetPfxPassword(),
+                                                                        X509KeyStorageFlags.EphemeralKeySet, Pkcs12LoaderLimits.Defaults);
             WriteLine($"Certificate expires: {certificate.NotAfter}");
             if (certificate.NotAfter > DateTime.Now + TimeSpan.FromDays(30))
             {
@@ -178,18 +178,20 @@ async Task ValidateAsync(IAuthorizationContext authorization)
         token = httpChallenge.Token;
         WriteLine($"Validating LetsEncrypt token: {token}");
         await File.WriteAllTextAsync(Path.Combine(encryptDirectory, token), keyAuthz);
-
+        await httpChallenge.Validate();
         while (true)
         {
-            var challenge = await httpChallenge.Validate();
-            WriteLine($"Challenge: {challenge.Error}, {challenge.Status} {challenge.Validated}");
+            var challenge = await httpChallenge.Resource();
+            if (challenge.Status == Certes.Acme.Resource.ChallengeStatus.Valid)
+            {
+                WriteLine($"Challenge: {challenge.Error}, {challenge.Status} {challenge.Validated}");
+                break;
+            }
             if (challenge.Status == Certes.Acme.Resource.ChallengeStatus.Invalid)
             {
                 WriteLine($"Could not validate LetsEncrypt token: {token}");
                 throw new Exception("Not valid");
             }
-            if (challenge.Status == Certes.Acme.Resource.ChallengeStatus.Valid)
-                break;
             await Task.Delay(2000);
         }
     }

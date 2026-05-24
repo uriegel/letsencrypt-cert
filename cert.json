@@ -1,14 +1,14 @@
 {
-    "account": "uriegel@hotmail.de",
+    "account": "mail@mail.de",
     "domains": [
-        "uriegel.de", "fritz.uriegel.de", "familie.uriegel.de"
+        "dom1.de", "dom2.de", "dom3.de"
     ],
     "data": {
         "countryName": "DE",
-        "state": "NRW",
-        "locality": "Cologne",
-        "organization": "URiegel",
+        "state": "BW",
+        "locality": "Reutlingen",
+        "organization": "URIEGEL",
         "organizationUnit": "Dev",
-        "commonName": "uriegel.de"
+        "commonName": "name.de"
     }
 }

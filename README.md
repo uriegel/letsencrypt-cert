@@ -63,7 +63,7 @@ Append
 
 ```
 PATH=$PATH:/home/pi/.dotnet/tools
-0 4 * * * LetsencryptCert > /home/pi/logs/letsencrypt.log 2>&1
+0 4 * * * LetsencryptCert -prod > /home/pi/logs/letsencrypt.log 2>&1
 ```
 
 This executes LetsEncrypt update every day at 4 AM . Last log is saved in ```/home/pi/logs/LetsencryptCert.log```
